@@ -5,7 +5,7 @@ This repo uses Google Maps Location History and provides how much time one might
 
 ## Ingredients
 
-- Google Maps Location History. If you enabled location history in the past, you can download it easily [here](https://www.google.com/maps/timeline). As of today, you can click setting button located at bottom right corner. Click "Download copy of your all data" and choose "Location History" in JSON format. Download it. This is our past data.
+- Google Maps Location History. If you enabled Google to keep track your every step (pun intended; Google Fit - step tracker, [wink wink nudge nudge](https://www.youtube.com/watch?v=SrDFGa0juCM)) in the past, you can download it easily [here](https://www.google.com/maps/timeline). As of today, you can click setting button located at bottom right corner. Click "Download copy of your all data" and choose "Location History" in JSON format. Download it. This is our past data.
 - places.json. We will fill some locations by getting help from Google Maps. Format should be as follows:
 
 ```
