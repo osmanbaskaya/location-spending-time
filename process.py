@@ -1,12 +1,9 @@
-import json
 import sys
 import datetime
-from bs4 import BeautifulSoup
 import json
 from geopy import distance
 from itertools import cycle
 import pandas as pd
-import seaborn as sns
 import os
 
 
@@ -16,11 +13,12 @@ def get_coord(location):
     longitude = "{}.{}".format(longitude[:-7], longitude[-7:])
     latitude = "{}.{}".format(latitude[:-7], latitude[-7:])
     try:
-        latitute = float(latitude)
+        latitude = float(latitude)
         longitude = float(longitude)
         return latitude, longitude
     except ValueError as e:
         print("ValueError:\n{}".format(location), file=sys.stderr, flush=True)
+        print(e)
         return None
 
 
@@ -53,15 +51,12 @@ class Locator:
         self.been_there[place] = True
         self.start_time[place] = t
 
-
     @staticmethod
     def read_location_data_file(data_fn):
         print("Reading the input: {}".format(data_fn))
         return json.load(open(data_fn))['locations']
 
-
     def process_data(self, data_fn, stop_after_num_day=None):
-
         locations = Locator.read_location_data_file(data_fn)
 
         d = {"date": [], 'weekday': [], 'month': []}
@@ -69,6 +64,7 @@ class Locator:
 
         date_to_process = None
         num_of_day_processed = -1
+        i = 0
 
         for i, location in enumerate(locations, 0):
             t = get_date(location)

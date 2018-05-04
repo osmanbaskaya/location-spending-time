@@ -1,2 +1,22 @@
 # location-spending-time
-This small repo provides some statistics about how much time you might spend in specific locations (e.g., work, home, etc.)
+
+This repo uses Google Maps Location History and provides how much time one might spent at specific locations such as home, work, and so on.
+
+
+## Ingredients
+
+- Google Maps Location History. If you enabled location history in the past, you can download it easily [here](https://www.google.com/maps/timeline). As of today, you can click setting button located at bottom right corner. Click "Download copy of your all data" and choose "Location History" in JSON format. Download it. This is our past data.
+- places.json. We will fill some locations by getting help from Google Maps. Format should be as follows:
+
+```
+{
+  "home" : [32.429264, -112.165769],
+  "work": [36.421965, -112.090632] 
+}
+```
+
+## How it works?
+
+
+## Author
+Osman Baskaya (osmanbaskaya1@gmail.com)
