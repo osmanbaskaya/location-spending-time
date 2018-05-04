@@ -65,7 +65,7 @@ class Locator:
         date_to_process = None
         num_of_day_processed = -1
         i = 0
-
+        
         for i, location in enumerate(locations, 0):
             t = get_date(location)
             curr_date = t.strftime('%Y-%m-%d')

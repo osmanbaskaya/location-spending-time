@@ -11,12 +11,17 @@ This repo uses Google Maps Location History and provides how much time one might
 ```
 {
   "home" : [32.429264, -112.165769],
-  "work": [36.421965, -112.090632] 
+  "work" : [36.421965, -112.090632] 
 }
 ```
 
+I have to prefer json since it is better not to provide location information carelessly (some irony here). 
+
 ## How it works?
 
+
+## Requirements
+It is tested on Python 3.6
 
 ## Author
 Osman Baskaya (osmanbaskaya1@gmail.com)
