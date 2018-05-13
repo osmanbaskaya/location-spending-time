@@ -18,6 +18,12 @@ This repo uses Google Maps Location History and provides how much time one might
 I have to prefer json since it is better not to provide location information carelessly (some irony here). 
 
 ## How it works?
+- After you downloaded the data, move it the .json file to the same directory where the code is located, and change its name to data.json. 
+- Edit your places.json according to the places that you want to learn how much time you spent at.
+- Now we're ready to run jupyter notebook. You're in the same directory where the code is located and run this on your terminal: `jupyter notebook`.
+- Hopefully the a web browser will automatically open. If not, copy the link you see in the terminal window to your web browser.
+- Now you should see a notebook named `Location-Time-Analysis.ipynb`. Open it and run all the code.
+- Done.
 
 
 ## Requirements

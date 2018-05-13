@@ -59,13 +59,13 @@ class Locator:
     def process_data(self, data_fn, stop_after_num_day=None):
         locations = Locator.read_location_data_file(data_fn)
 
-        d = {"date": [], 'weekday': [], 'month': []}
+        d = {"date": [], 'weekday': [], 'month': [], 'year':[]}
         d.update(dict([(place, []) for place in self.places]))
 
         date_to_process = None
         num_of_day_processed = -1
         i = 0
-        
+
         for i, location in enumerate(locations, 0):
             t = get_date(location)
             curr_date = t.strftime('%Y-%m-%d')
@@ -81,8 +81,11 @@ class Locator:
                         self.exit_from_place(place, t, d)  # day.
 
                 date_to_process = curr_date
+                year, month, day = date_to_process.split('-')
+
                 d['date'].append(date_to_process)
-                d['month'].append("{}-{}".format(*date_to_process.split('-')[:2]))
+                d['month'].append("{}-{}".format(year, month))
+                d['year'].append("{}".format(year))
 
                 d['weekday'].append(t.weekday() + 1)
                 for place in self.places:
