@@ -27,9 +27,9 @@ I have to prefer json since it is better not to provide location information car
 
 
 ## Requirements
-geopy==1.13.0
-pandas=0.22.0
-python>=3.6.0
+* geopy==1.13.0
+* pandas=0.22.0
+* python>=3.6.0
 
 ## Author
 Osman Baskaya (osmanbaskaya1@gmail.com)
