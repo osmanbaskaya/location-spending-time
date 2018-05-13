@@ -1,6 +1,6 @@
 # location-spending-time
 
-This repo uses Google Maps Location History and provides how much time one might spent at specific locations such as home, work, and so on.
+This repo uses Google Maps Location History and provides how much time you spend at specific locations such as home, work, and so on.
 
 
 ## Ingredients
